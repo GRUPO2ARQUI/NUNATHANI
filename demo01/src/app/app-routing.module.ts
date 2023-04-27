@@ -9,6 +9,9 @@ import { EstadoComponent } from './component/estado/estado.component';
 import { DisponibilidadInsertarComponent } from './component/disponibilidad/disponibilidad-insertar/disponibilidad-insertar.component';
 import { DisponibilidadComponent } from './component/disponibilidad/disponibilidad.component';
 
+import { UsuarioComponent } from './component/usuario/usuario.component';
+import { UsuarioInsertarComponent } from './component/usuario/usuario-insertar/usuario-insertar.component';
+
 
 const routes: Routes = [
   {
@@ -35,6 +38,15 @@ const routes: Routes = [
     children: [
       {path: 'disponibilidadinsertar', component: DisponibilidadInsertarComponent},
       {path: 'edicion/:id', component: DisponibilidadInsertarComponent},
+    ],
+  },
+  
+  {
+    path:'usuario',
+    component:UsuarioComponent,
+    children: [
+      {path: 'usuario-insertar', component: UsuarioInsertarComponent},
+      {path: 'edicion/:id', component: UsuarioInsertarComponent},
     ],
   },
   
