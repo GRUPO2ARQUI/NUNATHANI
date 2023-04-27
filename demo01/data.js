@@ -44,6 +44,32 @@ module.exports = function () {
         id:4,
         disponibilidad: "Disponible",
       }
+    ],
+    disponibilidad: [
+      {
+        id: 1,
+        inicio_turno: "08:00",
+        fin_turno: "14:00",
+        dias_laborales: ["Lunes", "Miércoles", "Viernes"]
+      },
+      {
+        id: 2,
+        inicio_turno: "12:00",
+        fin_turno: "18:00",
+        dias_laborales: ["Miércoles", "Viernes"]
+      },
+      {
+        id: 3,
+        inicio_turno: "10:00",
+        fin_turno: "16:00",
+        dias_laborales: ["Lunes", "Viernes"]
+      },
+      {
+        id: 4,
+        inicio_turno: "14:00",
+        fin_turno: "20:00",
+        dias_laborales: ["Martes", "Jueves"]
+      }
     ]
     
     
