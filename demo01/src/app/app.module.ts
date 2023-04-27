@@ -29,6 +29,11 @@ import { DisponibilidadListarComponent } from './component/disponibilidad/dispon
 import { DisponibilidadInsertarComponent } from './component/disponibilidad/disponibilidad-insertar/disponibilidad-insertar.component';
 import { DisponibilidadDialogoComponent } from './component/disponibilidad/disponibilidad-listar/disponibilidad-dialogo/disponibilidad-dialogo.component';
 
+import { UsuarioComponent } from './component/usuario/usuario.component';
+import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
+import { UsuarioInsertarComponent } from './component/usuario/usuario-insertar/usuario-insertar.component';
+import { UsuarioDialogoComponent } from './component/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component'
+
 
 @NgModule({
   declarations: [
@@ -47,7 +52,12 @@ import { DisponibilidadDialogoComponent } from './component/disponibilidad/dispo
     DisponibilidadComponent,
     DisponibilidadListarComponent,
     DisponibilidadInsertarComponent,
-    DisponibilidadDialogoComponent
+    DisponibilidadDialogoComponent, 
+    
+    UsuarioComponent,
+    UsuarioListarComponent,
+    UsuarioInsertarComponent,
+    UsuarioDialogoComponent,
 
   ],
   imports: [
