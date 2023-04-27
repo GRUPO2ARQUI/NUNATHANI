@@ -24,6 +24,10 @@ import { EstadoComponent } from './component/estado/estado.component';
 import { EstadoListarComponent } from './component/estado/estado-listar/estado-listar.component';
 import { EstadoDialogoComponent } from './component/estado/estado-listar/estado-dialogo/estado-dialogo.component';
 
+import { DisponibilidadComponent } from './component/disponibilidad/disponibilidad.component';
+import { DisponibilidadListarComponent } from './component/disponibilidad/disponibilidad-listar/disponibilidad-listar.component';
+import { DisponibilidadInsertarComponent } from './component/disponibilidad/disponibilidad-insertar/disponibilidad-insertar.component';
+import { DisponibilidadDialogoComponent } from './component/disponibilidad/disponibilidad-listar/disponibilidad-dialogo/disponibilidad-dialogo.component';
 
 
 @NgModule({
@@ -38,7 +42,12 @@ import { EstadoDialogoComponent } from './component/estado/estado-listar/estado-
     EstadoComponent,
     EstadoListarComponent,
     EstadoInsertarComponent,
-    EstadoDialogoComponent
+    EstadoDialogoComponent,
+    
+    DisponibilidadComponent,
+    DisponibilidadListarComponent,
+    DisponibilidadInsertarComponent,
+    DisponibilidadDialogoComponent
 
   ],
   imports: [
