@@ -6,6 +6,10 @@ import { EspecialidadInsertarComponent } from './component/especialidad/especial
 import { EstadoInsertarComponent } from './component/estado/estado-insertar/estado-insertar.component';
 import { EstadoComponent } from './component/estado/estado.component';
 
+import { DisponibilidadInsertarComponent } from './component/disponibilidad/disponibilidad-insertar/disponibilidad-insertar.component';
+import { DisponibilidadComponent } from './component/disponibilidad/disponibilidad.component';
+
+
 const routes: Routes = [
   {
     path: 'especialidad',
