@@ -26,32 +26,27 @@ module.exports = function () {
         descripcionEspecialidad:"se centra en la aplicación de la psicología a las empresas y organizaciones, incluyendo la selección y capacitación de personal",
       }
     ],
-    Psicologo:[
+   
+    estado: [
       {
-        id: 1,
-        nombre: "Juan Pérez",
-        correoElectronico: "juan.perez@ejemplo.com",
-        Especialidad:
-        {
-          id:1,
-          tipoEspecialidad: "Psicología Clínica",
-          centroEspecialidad: "UNMSM",
-        }
+        id:1,
+        disponibilidad: "Disponible",
       },
-
       {
-        id: 2,
-        nombre: "María García",
-        correoElectronico: "maria.garcia@ejemplo.com",
-        Especialidad:
-        {
-          id:2,
-          tipoEspecialidad: "Psicología Social",
-          centroEspecialidad: "PUCP",
-        }
-
+        id:2,
+        disponibilidad: "No disponible",
       },
+      {
+        id:3,
+        disponibilidad: "Disponible",
+      },
+      {
+        id:4,
+        disponibilidad: "Disponible",
+      }
     ]
+    
+    
   }
   return data
 }
