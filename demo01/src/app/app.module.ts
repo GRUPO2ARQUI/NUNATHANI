@@ -32,7 +32,13 @@ import { DisponibilidadDialogoComponent } from './component/disponibilidad/dispo
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
 import { UsuarioInsertarComponent } from './component/usuario/usuario-insertar/usuario-insertar.component';
-import { UsuarioDialogoComponent } from './component/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component'
+import { UsuarioDialogoComponent } from './component/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
+
+import { Rutinas_recreativasComponent } from './component/rutinas_recreativas/rutinas_recreativas.component';
+import { Rutinas_recreativasListarComponent } from './component/rutinas_recreativas/rutinas_recreativas-listar/rutinas_recreativas-listar.component';
+import { Rutinas_recreativasInsertarComponent } from './component/rutinas_recreativas/rutinas_recreativas-insertar/rutinas_recreativas-insertar.component';
+import { Rutinas_recreativasDialogoComponent } from './component/rutinas_recreativas/rutinas_recreativas-listar/rutinas-recreativas-dialogo/rutinas-recreativas-dialogo.component';
+
 
 
 @NgModule({
@@ -58,6 +64,11 @@ import { UsuarioDialogoComponent } from './component/usuario/usuario-listar/usua
     UsuarioListarComponent,
     UsuarioInsertarComponent,
     UsuarioDialogoComponent,
+    
+    Rutinas_recreativasComponent,
+    Rutinas_recreativasListarComponent,
+    Rutinas_recreativasInsertarComponent,
+    Rutinas_recreativasDialogoComponent,
 
   ],
   imports: [
