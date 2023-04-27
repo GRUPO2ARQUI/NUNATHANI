@@ -24,6 +24,15 @@ const routes: Routes = [
     ],
   },
   
+  {
+    path: 'disponibilidad',
+    component: DisponibilidadComponent
+    ,
+    children: [
+      {path: 'disponibilidadinsertar', component: DisponibilidadInsertarComponent},
+      {path: 'edicion/:id', component: DisponibilidadInsertarComponent},
+    ],
+  },
   
   
 ];
