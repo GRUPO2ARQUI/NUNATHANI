@@ -23,7 +23,7 @@ import { EstadoInsertarComponent } from './component/estado/estado-insertar/esta
 import { EstadoComponent } from './component/estado/estado.component';
 import { EstadoListarComponent } from './component/estado/estado-listar/estado-listar.component';
 import { EstadoDialogoComponent } from './component/estado/estado-listar/estado-dialogo/estado-dialogo.component';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -56,7 +56,7 @@ import { EstadoDialogoComponent } from './component/estado/estado-listar/estado-
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
-
+    MatPaginatorModule,
 
   ],
   providers: [],
