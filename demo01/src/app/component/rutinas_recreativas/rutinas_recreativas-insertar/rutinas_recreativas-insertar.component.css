@@ -1,14 +1,12 @@
 /* Estilos para el body */
 body {
   font-family: 'Bellota', sans-serif;
-  background-color: #E8D0BA;
   min-height: 100vh;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
 }
@@ -23,7 +21,7 @@ body {
 
 /* Estilos para encabezados */
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   color: #6d2b79;
   margin-top: 0;
@@ -123,12 +121,12 @@ body {
 }
 
 form {
-  width: 80%;
+  width: 90%;
   max-width: 400px;
-  padding: 16px;
+  padding: 40px;
+  box-shadow: 0px 10px 10px -6px black;
   border-radius: 4px;
   background-color: #c5b7c2; /* Agregar relleno blanco al formulario */
-  box-shadow: 0px 10px 10px -6px black;
 }
 
 
@@ -156,7 +154,7 @@ margin-top: -20px;
 margin-bottom: 10px;
 }
 
-/* Estilos para mensajes de éxito */
+/* Estilos para mensajes de Ã©xito */
 .success-message {
 color: #28a745;
 font-size: 14px;
