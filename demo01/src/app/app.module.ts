@@ -40,8 +40,6 @@ import { Rutinas_recreativasListarComponent } from './component/rutinas_recreati
 import { Rutinas_recreativasInsertarComponent } from './component/rutinas_recreativas/rutinas_recreativas-insertar/rutinas_recreativas-insertar.component';
 import { Rutinas_recreativasDialogoComponent } from './component/rutinas_recreativas/rutinas_recreativas-listar/rutinas-recreativas-dialogo/rutinas-recreativas-dialogo.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
