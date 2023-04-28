@@ -28,7 +28,7 @@ import { DisponibilidadComponent } from './component/disponibilidad/disponibilid
 import { DisponibilidadListarComponent } from './component/disponibilidad/disponibilidad-listar/disponibilidad-listar.component';
 import { DisponibilidadInsertarComponent } from './component/disponibilidad/disponibilidad-insertar/disponibilidad-insertar.component';
 import { DisponibilidadDialogoComponent } from './component/disponibilidad/disponibilidad-listar/disponibilidad-dialogo/disponibilidad-dialogo.component';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -65,7 +65,7 @@ import { DisponibilidadDialogoComponent } from './component/disponibilidad/dispo
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
-
+    MatPaginatorModule,
 
   ],
   providers: [],
