@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { EspecialidadDialogoComponent } from './component/especialidad/especialidad-listar/especialidad-dialogo/especialidad-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { EstadoInsertarComponent } from './component/estado/estado-insertar/estado-insertar.component'
 import { EstadoComponent } from './component/estado/estado.component';
@@ -86,7 +87,7 @@ import { Rutinas_recreativasDialogoComponent } from './component/rutinas_recreat
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
-
+    MatPaginatorModule,
 
   ],
   providers: [],
