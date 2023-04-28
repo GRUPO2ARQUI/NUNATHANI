@@ -89,7 +89,6 @@ import { Rutinas_recreativasDialogoComponent } from './component/rutinas_recreat
     MatIconModule,
     MatPaginatorModule,
 
-
   ],
   providers: [],
   bootstrap: [AppComponent]
