@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Especialidad } from 'src/app/model/especialidad';
 import { EspecialidadService } from 'src/app/service/especialidad.service';
 import { MatTableDataSource } from '@angular/material/table'
 import { MatDialog } from '@angular/material/dialog'
 import { EspecialidadDialogoComponent } from './especialidad-dialogo/especialidad-dialogo.component';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 @Component({
@@ -15,16 +16,19 @@ export class EspecialidadListarComponent implements OnInit {
 
   dataSource: MatTableDataSource<Especialidad> = new MatTableDataSource();
   displayedColumns: string[] = ['codigo', 'tipo', 'descripcion', 'centro','ceditar']
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator; //THIS
   private idMayor:number = 0;
   constructor(private eS: EspecialidadService, private dialog: MatDialog) {}
   ngOnInit(): void {
     this.eS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator; //THIS
     });
 
     this.eS.getList().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
-
+      this.dataSource.paginator = this.paginator; //THIS
     });
     this.eS.getConfirmarEliminacion().subscribe(data =>{
       data==true ? this.eliminar(this.idMayor) :false;
@@ -42,6 +46,8 @@ export class EspecialidadListarComponent implements OnInit {
     this.eS.eliminar(id).subscribe(()=>{
       this.eS.list().subscribe(data=>{
         this.eS.setList(data);
+        this.dataSource = new MatTableDataSource(data);
+        this.dataSource.paginator = this.paginator; //THIS
       });
     });
   }
