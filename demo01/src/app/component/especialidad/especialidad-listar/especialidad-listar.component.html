@@ -15,20 +15,20 @@
   <div class="container">
     <div style="text-align: center;">
       <h1>Lista de Especialidades</h1>
+      <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
     </div>
-    <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
-
-
-
+    <div>
+      <button mat-raised-button color="warn" routerLink="/especialidad/especialidadinsertar">
+        Nuevo
+      </button>
+    </div>
+    
     <div style="display: flex; justify-content: space-between; align-items: center;">
 
       <mat-form-field style="flex: 1; margin-right: 16px;">
         <input  matInput (keyup)="filtrar($event)" placeholder="Buscar"/>
       </mat-form-field>
 
-      <button mat-raised-button color="warn" routerLink="/especialidad/especialidadinsertar">
-        Nuevo
-      </button>
     </div>
 
 
@@ -79,6 +79,8 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5]"></mat-paginator>
   </div>
 
 </body>

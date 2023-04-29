@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator'; //THIS
 import { MatTableDataSource } from '@angular/material/table';
 import { Usuario } from 'src/app/model/usuario';
 import { UsuarioService } from 'src/app/service/usuario.service';
@@ -18,14 +19,18 @@ export class UsuarioListarComponent implements OnInit {
   displayedColumns: string[] = ['no', 'nombre', 'apellido', 'contraseña', 'telefono', 'ceditar']
   private idMayor: number = 0;
 
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator; //THIS
   constructor(private uS: UsuarioService, private dialog: MatDialog) {
   }
   ngOnInit(): void {
     this.uS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator; //THIS
     });
     this.uS.getList().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator; //THIS
     });
     this.uS.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
@@ -40,6 +45,8 @@ export class UsuarioListarComponent implements OnInit {
     this.uS.eliminar(id).subscribe(() => {
       this.uS.list().subscribe(data => {
         this.uS.setList(data);/* se ejecuta la línea 27 */
+        this.dataSource = new MatTableDataSource(data); //THIS
+        this.dataSource.paginator = this.paginator; //THIS
       });
     });
   }
