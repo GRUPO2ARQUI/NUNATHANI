@@ -7,8 +7,10 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="form-container">
     <form [formGroup]="form" (submit)="aceptar()">
       <h1 class="mensaje">Ingrese los datos</h1>
+
       <mat-form-field class="example-full-width">
         <mat-label>Código</mat-label>
         <input required matInput placeholder="No" formControlName="id" />
@@ -36,13 +38,15 @@
 
       <br />
       <div style="text-align: center">
-        <button mat-raised-button color="primary"><mat-icon>check</mat-icon></button>
-        <button mat-raised-button color="warn" routerLink="/rutinas_recreativas">
+        <button mat-icon-button color="primary">
+          <mat-icon>check</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" routerLink="/rutinas_recreativas">
           <mat-icon>cancel</mat-icon>
         </button>
-        <br />
       </div>
       <p>{{ mensaje }}</p>
     </form>
+  </div>
   </body>
 </html>
