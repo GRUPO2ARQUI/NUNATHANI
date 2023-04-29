@@ -10,7 +10,7 @@ body {
   align-items: center;
   background-color: #ffffff;
   background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+  background-position: 0 0, 10px 10px;
 }
 
 /* Estilos para un contenedor principal */
@@ -23,7 +23,7 @@ body {
 
 /* Estilos para encabezados */
 h1 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: bold;
   color: #6d2b79;
   margin-top: 0;
@@ -54,6 +54,7 @@ a:hover {
   border: none;
   cursor: pointer;
   margin-bottom: 20px;
+
 }
 
 .mat-raised-button:hover {
@@ -94,6 +95,7 @@ a:hover {
 .mat-header-cell,
 .mat-cell {
   text-align: center;
+
 }
 
 .mat-header-row,
