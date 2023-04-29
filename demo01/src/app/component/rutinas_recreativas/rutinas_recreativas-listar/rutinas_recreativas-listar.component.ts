@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Rutinas_recreativas } from 'src/app/model/rutinas_recreativas';
 import { Rutinas_recreativasService } from 'src/app/service/rutinas_recreativas.service';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatDialog } from '@angular/material/dialog'
+import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator'; //THIS
 import { Rutinas_recreativasDialogoComponent } from './rutinas-recreativas-dialogo/rutinas-recreativas-dialogo.component';
 @Component({
   selector: 'app-rutinas_recreativas-listar',
@@ -10,6 +11,7 @@ import { Rutinas_recreativasDialogoComponent } from './rutinas-recreativas-dialo
   styleUrls: ['./rutinas_recreativas-listar.component.css'],
 })
 export class Rutinas_recreativasListarComponent implements OnInit {
+  
   dataSource: MatTableDataSource<Rutinas_recreativas> = new MatTableDataSource();
   lista: Rutinas_recreativas[] = [];
   displayedColumns: string[] = [
@@ -18,14 +20,18 @@ export class Rutinas_recreativasListarComponent implements OnInit {
     'Descripcion',
     'ceditar',
   ];
+  @ViewChild(MatPaginator) paginator!: MatPaginator; //THIS
+
   private idMayor:number=0;
   constructor(private rS: Rutinas_recreativasService, private dialog: MatDialog) {}
   ngOnInit(): void {
     this.rS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator; //THIS
     });
     this.rS.getList().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator; //THIS
     });
     this.rS.getConfirmaEliminacion().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
@@ -43,6 +49,8 @@ export class Rutinas_recreativasListarComponent implements OnInit {
     this.rS.eliminar(id).subscribe(() => {
       this.rS.list().subscribe(data => {
         this.rS.setList(data);/* se ejecuta la línea 27 */
+        this.dataSource = new MatTableDataSource(data); //THIS
+        this.dataSource.paginator = this.paginator; //THIS
       });
     });
   }

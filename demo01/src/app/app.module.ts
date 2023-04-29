@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module'; 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EspecialidadListarComponent } from './component/especialidad/especialidad-listar/especialidad-listar.component';
@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { EspecialidadDialogoComponent } from './component/especialidad/especialidad-listar/especialidad-dialogo/especialidad-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { MatPaginatorModule} from '@angular/material/paginator';
 
