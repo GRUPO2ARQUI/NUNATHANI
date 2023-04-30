@@ -20,8 +20,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 
-import { MatPaginatorModule} from '@angular/material/paginator';
-
 import { EstadoInsertarComponent } from './component/estado/estado-insertar/estado-insertar.component'
 import { EstadoComponent } from './component/estado/estado.component';
 import { EstadoListarComponent } from './component/estado/estado-listar/estado-listar.component';
@@ -31,9 +29,6 @@ import { DisponibilidadComponent } from './component/disponibilidad/disponibilid
 import { DisponibilidadListarComponent } from './component/disponibilidad/disponibilidad-listar/disponibilidad-listar.component';
 import { DisponibilidadInsertarComponent } from './component/disponibilidad/disponibilidad-insertar/disponibilidad-insertar.component';
 import { DisponibilidadDialogoComponent } from './component/disponibilidad/disponibilidad-listar/disponibilidad-dialogo/disponibilidad-dialogo.component';
-
-import {MatPaginatorModule} from '@angular/material/paginator';
-
 
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
