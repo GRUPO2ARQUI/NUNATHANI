@@ -17,20 +17,19 @@
       <h1>Lista de Especialidades</h1>
       <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
     </div>
-    <div>
-      <button mat-raised-button color="warn" routerLink="/especialidad/especialidadinsertar">
-        Nuevo
-      </button>
-    </div>
-    
-    <div style="display: flex; justify-content: space-between; align-items: center;">
 
+  <div class="container">
+    <div style="text-align: center;">
+      <h1>Lista de Especialidades</h1>
+      <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
       <mat-form-field style="flex: 1; margin-right: 16px;">
-        <input  matInput (keyup)="filtrar($event)" placeholder="Buscar"/>
+        <input matInput (keyup)="filtrar($event)" placeholder="Buscar" />
       </mat-form-field>
 
+      <button mat-raised-button color="warn" routerLink="/especialidad/especialidadinsertar">Nuevo</button>
     </div>
-
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
