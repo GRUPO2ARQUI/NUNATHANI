@@ -39,8 +39,15 @@ export class DisponibilidadInsertarComponent implements OnInit {
     this.disponibilidad.fin_turno = this.form.value['fin_turno'];
     this.disponibilidad.dias_laborales = this.form.value['dias_laborales'];
 
+
     // Expresión regular para validar formato de hora HH:mm
   const horaRegex = /^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/;
+
+  // Verificar si todos los campos están vacíos
+  if (Object.values(this.form.value).every(val => !val)) {
+    this.mensaje = 'Ingrese todos los campos';
+    return;
+  }
 
   // Eliga un dia laborable
   if (this.form.value['dias_laborales'].length === 0) {
@@ -60,40 +67,41 @@ export class DisponibilidadInsertarComponent implements OnInit {
     return;
   }
 
-    if (
-      this.form.value['inicio_turno'] > 0 &&
-      this.form.value['inicio_turno'] <= 24 &&
-      this.form.value['fin_turno'] > 0 &&
-      this.form.value['fin_turno'] <= 24
-    ) {
-      // Tu código aquí
-    } else {
-      this.mensaje = 'Ingrese un horario real!!';
-    }
+  if (
+    this.form.value['inicio_turno'] > 0 &&
+    this.form.value['inicio_turno'] <= 24 &&
+    this.form.value['fin_turno'] > 0 &&
+    this.form.value['fin_turno'] <= 24
+  ) {
+    // Tu código aquí
+  } else {
+    this.mensaje = 'Ingrese un horario real!!';
+  }
 
 
-    // Corrección en el bloque condicional
-    if ( this.form.value['inicio_turno'].length > 0 && this.form.value['fin_turno'].length > 0) {
+  // Corrección en el bloque condicional
+  if ( this.form.value['inicio_turno'].length > 0 && this.form.value['fin_turno'].length > 0) {
     if (this.edicion) {
       //guardar lo actualizado
       this.dS.update(this.disponibilidad).subscribe(() => {
         this.dS.list().subscribe((data) => {
           this.dS.setList(data);
         });
-      });}
-      else {
-        this.dS.insert(this.disponibilidad).subscribe((data) => {
-          this.dS.list().subscribe((data) => {
-            this.dS.setList(data);
-          });
-        });
-      }
-      this.router.navigate(['disponibilidad']);
-    }else {
-      this.mensaje = 'Ingrese un horario real!!';
+      });
     }
-
+    else {
+      this.dS.insert(this.disponibilidad).subscribe((data) => {
+        this.dS.list().subscribe((data) => {
+          this.dS.setList(data);
+        });
+      });
+    }
+    this.router.navigate(['disponibilidad']);
+  } else {
+    this.mensaje = 'Ingrese un horario real!!';
   }
+}
+
   init() {
     if (this.edicion) {
       this.dS.listId(this.id).subscribe((data) => {
